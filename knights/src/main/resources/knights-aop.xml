@@ -17,6 +17,7 @@
 <bean id="minstrel" class="com.springinaction.knights.Minstrel" />
 
 <aop:config>
+	<!-- Minstrel被声明为一个切面 -->
 	<aop:aspect ref="minstrel">
 		<!-- 定义切面 -->
 		<aop:pointcut id="embark" expression="execution(* *.embarkOnQuest(..))" />

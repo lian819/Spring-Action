@@ -1,5 +1,10 @@
 package com.springinaction.knights;
 
+/**
+ * @author	Lian
+ * @time	2015年12月15日 上午2:18:06
+ * @desc	伟大的骑士身后总有吟游诗人Minstrel为其赞颂
+ */
 public class Minstrel {
 	// 探险之前调用
 	public void singBeforeQuest() {

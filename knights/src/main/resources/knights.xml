@@ -4,6 +4,8 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans 
 	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
+	<!-- 该配置文件让BraveKnight接受了一个SlayDragonQuest探险任务 -->
+
 	<bean id="knight" class="com.springinaction.knights.BraveKnight">
 		<!-- 注入questBean -->
 		<constructor-arg ref="quest" />

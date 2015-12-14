@@ -1,2 +1,5 @@
-knights/target
-springidol/target
+*/.settings/
+*/.project
+*/.classpath
+
+*/target

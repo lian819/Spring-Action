@@ -5,7 +5,8 @@ import java.util.Collection;
 /**
  * @author Lian
  * @time 2015年10月10日 上午1:41:27
- * @desc 一个乐队的参赛者
+ * @desc 一个乐队的参赛者:可以同时演奏多种乐器
+ * 		参数类型为Collection
  */
 public class OneManBand implements Performer {
 	public OneManBand() {

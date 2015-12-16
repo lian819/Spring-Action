@@ -1,5 +1,11 @@
 package com.springinaction.springidol;
 
+/**
+ * @author	Lian
+ * @time	2015年12月17日 上午12:53:55
+ * @desc	朗诵莎士比亚的诗歌
+ * 			该类呈现了诗人的伟大工作
+ */
 public class Sonnet29 implements Poem {
 	private static String[] LINES = {
 			"When, in disgrace with fortune and men's eyes,",

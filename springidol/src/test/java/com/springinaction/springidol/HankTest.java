@@ -7,13 +7,13 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 /**
  * @author	Lian
  * @time	2015年12月17日 上午12:37:56
- * @desc	对duke进行测试排练
+ * @desc	多乐器演奏, 参数类型为Collection
  */
-public class DukeTest {
+public class HankTest {
 	@Test
 	public void performaceText() {
 		ApplicationContext context = new ClassPathXmlApplicationContext("com/springinaction/springidol/spring-idol.xml");
-		Juggler performer = (Juggler) context.getBean("duke");
+		OneManBand performer = (OneManBand) context.getBean("hank");
 		try {
 			performer.perform();
 		} catch (PerformanceException e) {

@@ -59,9 +59,9 @@
 	</bean>
 
 	<!-- SpEl表达式, 配置文件.属性 -->
-	<!-- <bean id="stan" class="com.springinaction.springidol.Instrumentalist">
+	<bean id="stan" class="com.springinaction.springidol.Instrumentalist">
 		<property name="song" value="#{systemProperties.STANS_SONG}" />
-	</bean> -->
+	</bean>
 
 	<!-- 歌单 -->
 	<util:list id="songList">

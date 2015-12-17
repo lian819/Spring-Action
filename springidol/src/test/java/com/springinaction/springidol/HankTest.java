@@ -11,7 +11,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  */
 public class HankTest {
 	@Test
-	public void performaceText() {
+	public void performaceTest() {
 		ApplicationContext context = new ClassPathXmlApplicationContext("com/springinaction/springidol/spring-idol.xml");
 		OneManBand performer = (OneManBand) context.getBean("hank");
 		try {

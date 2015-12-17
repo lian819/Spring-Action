@@ -11,7 +11,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  */
 public class PoeticDukeTest {
 	@Test
-	public void performaceText() {
+	public void performaceTest() {
 		ApplicationContext context = new ClassPathXmlApplicationContext("com/springinaction/springidol/spring-idol.xml");
 		PoeticJuggler performer = (PoeticJuggler) context.getBean("poeticDuke");
 		try {

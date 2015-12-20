@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+     http://www.springframework.org/schema/beans/spring-beans.xsd
+     http://www.springframework.org/schema/aop
+     http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+	<!-- 定义乐器演奏家eddie -->
+	<bean id="eddie" class="com.springinaction.springidol.Instrumentalist">
+		<property name="instrument">
+			<bean class="com.springinaction.springidol.Guitar" />
+		</property>
+	</bean>
+
+	<!-- 定义audience bean -->
+	<bean id="audience" class="com.springinaction.springidol.Audience" />
+
+	<!-- 使用Spring的AOP配置元素声明一个audience切面 -->
+	<aop:config>
+		<aop:aspect ref="audience">
+			<!-- 为了避免重复定义切点, 可以使用aop:pointcut元素定义一个命名切点 -->
+			<aop:pointcut expression="execution(* com.springinaction.springidol.Performer.perform(..))" id="performance"/>
+			<aop:before pointcut-ref="performance" method="takeSeats"/>
+			<aop:before pointcut-ref="performance" method="turnOffCellPhones"/>
+
+			<aop:after-returning pointcut-ref="performance" method="applaud"/>
+			<aop:after-throwing pointcut-ref="performance" method="demandRefund"/>
+		</aop:aspect>
+	</aop:config>
+
+</beans>

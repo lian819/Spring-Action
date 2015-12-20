@@ -25,6 +25,7 @@ public class AnnotationConfigTest {
 	@Autowired
 	private Instrument guitar;
 
+	
 	@Test
 	public void shouldWiredWithAutowire() {
 		try {

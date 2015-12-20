@@ -31,6 +31,8 @@
     <module>knights</module>
     <module>springidol</module>
     <module>springidol-autodiscovery</module>
+    <module>springidol-aspectj</module>
+    <module>springidol-aop</module>
   </modules>
 
   <repositories>

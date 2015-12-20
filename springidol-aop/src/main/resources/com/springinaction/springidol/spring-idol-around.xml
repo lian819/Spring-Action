@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+     http://www.springframework.org/schema/beans/spring-beans.xsd
+     http://www.springframework.org/schema/aop
+     http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+	<!-- 定义乐器演奏家eddie -->
+	<bean id="eddie" class="com.springinaction.springidol.Instrumentalist">
+		<property name="instrument">
+			<bean class="com.springinaction.springidol.Guitar" />
+		</property>
+	</bean>
+
+	<!-- 定义audience bean -->
+	<bean id="audience" class="com.springinaction.springidol.AroundAudience" />
+
+	<!-- 使用Spring的AOP配置元素声明一个audience切面 -->
+	<aop:config>
+		<aop:aspect ref="audience">
+			<aop:pointcut expression="execution(* com.springinaction.springidol.Performer.perform(..))" id="performance"/>
+
+			<!-- 定义环绕通知 -->
+			<aop:around method="watchPerformace" pointcut-ref="performance"/>
+		</aop:aspect>
+	</aop:config>
+
+</beans>
